@@ -1,0 +1,1318 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>小草影院 - 官方视频平台 | 高清正版在线观看社区</title>
+<meta name="description" content="小草影院官方网站，专注高清正版影视内容在线观看，汇聚专业创作者与精品片单，打造值得信赖的视频内容生态与社区。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f2e1e'/%3E%3Cpath d='M20 46c0-14 8-24 24-28-4 8-6 16-6 22 0 4 1 6 3 8-8 2-16 1-21-2z' fill='%2348c78c'/%3E%3Cpath d='M26 30c4 1 7 4 8 9' stroke='%23e8f8ef' stroke-width='2.4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+:root{
+--cx-deep:#0d2419;
+--cx-deep2:#123423;
+--cx-green:#3fae72;
+--cx-green-bright:#5fd894;
+--cx-mint:#e6f6ec;
+--cx-cream:#f5faf6;
+--cx-ink:#14251b;
+--cx-muted:#5c7166;
+--cx-line:#d6e6dc;
+--cx-amber:#e0a63c;
+--cx-radius:16px;
+--cx-shadow:0 14px 36px rgba(15,52,34,.12);
+--cx-header-h:104px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:var(--cx-header-h)}
+body{
+font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+color:var(--cx-ink);
+background:var(--cx-cream);
+line-height:1.75;
+-webkit-font-smoothing:antialiased;
+}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+h1,h2,h3,h4{line-height:1.3;font-weight:800;letter-spacing:.01em}
+ul{list-style:none}
+
+/* ---------- sticky header stack ---------- */
+.cx-topstack{position:sticky;top:0;z-index:90}
+.cx-announce{
+background:linear-gradient(90deg,var(--cx-deep) 0%,var(--cx-deep2) 60%,#1a4a31 100%);
+color:#d9f4e4;font-size:13px;letter-spacing:.02em;
+padding:9px 20px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:center;
+}
+.cx-announce-badge{
+background:var(--cx-green-bright);color:#0b2317;font-weight:800;font-size:11px;
+padding:2px 9px;border-radius:99px;letter-spacing:.08em;white-space:nowrap;
+}
+.cx-announce a{text-decoration:underline;text-underline-offset:3px;color:#eafff3}
+.cx-announce a:hover{color:#fff}
+.cx-header{
+background:rgba(245,250,246,.94);backdrop-filter:blur(12px);
+border-bottom:1px solid var(--cx-line);
+padding:0 24px;
+}
+.cx-header-inner{
+max-width:1240px;margin:0 auto;min-height:66px;
+display:flex;align-items:center;gap:26px;
+}
+.cx-brand{display:flex;align-items:center;gap:11px;flex-shrink:0}
+.cx-brand-mark{width:38px;height:38px;border-radius:11px;overflow:hidden;flex-shrink:0}
+.cx-brand-name{font-size:19px;font-weight:900;letter-spacing:.02em;color:var(--cx-deep)}
+.cx-brand-name span{color:var(--cx-green)}
+.cx-brand-sub{display:block;font-size:10.5px;font-weight:600;color:var(--cx-muted);letter-spacing:.14em}
+.cx-nav{display:flex;gap:4px;flex:1}
+.cx-nav a{
+font-size:14.5px;font-weight:600;color:#33493c;padding:8px 13px;border-radius:9px;
+transition:background .2s,color .2s;
+}
+.cx-nav a:hover{background:var(--cx-mint);color:var(--cx-deep)}
+.cx-header-tools{display:flex;align-items:center;gap:10px;margin-left:auto}
+.cx-search{position:relative;display:flex;align-items:center}
+.cx-search input{
+width:200px;padding:9px 14px 9px 36px;border-radius:99px;
+border:1px solid var(--cx-line);background:#fff;font-size:13.5px;color:var(--cx-ink);
+transition:border-color .2s,box-shadow .2s,width .25s;
+}
+.cx-search input:focus{outline:none;border-color:var(--cx-green);box-shadow:0 0 0 3px rgba(95,216,148,.22);width:232px}
+.cx-search svg{position:absolute;left:12px;width:15px;height:15px;stroke:var(--cx-muted);fill:none;stroke-width:2;pointer-events:none}
+.cx-search-tip{
+position:absolute;top:calc(100% + 8px);left:0;right:0;background:#fff;border:1px solid var(--cx-line);
+border-radius:12px;box-shadow:var(--cx-shadow);padding:8px;font-size:12.5px;color:var(--cx-muted);
+display:none;
+}
+.cx-search-tip.cx-open{display:block}
+.cx-search-tip b{color:var(--cx-green)}
+.cx-btn{
+display:inline-flex;align-items:center;justify-content:center;gap:7px;
+font-size:14px;font-weight:700;padding:10px 20px;border-radius:99px;
+transition:transform .15s,box-shadow .2s,background .2s;
+}
+.cx-btn:active{transform:scale(.97)}
+.cx-btn-primary{background:var(--cx-green);color:#fff;box-shadow:0 6px 16px rgba(63,174,114,.3)}
+.cx-btn-primary:hover{background:#349a62}
+.cx-btn-ghost{background:#fff;border:1.5px solid var(--cx-line);color:var(--cx-deep)}
+.cx-btn-ghost:hover{border-color:var(--cx-green);color:var(--cx-green)}
+.cx-btn-dark{background:var(--cx-deep);color:#eafff3}
+.cx-nav-toggle{display:none;width:40px;height:40px;border-radius:10px;border:1px solid var(--cx-line);background:#fff;align-items:center;justify-content:center}
+.cx-nav-toggle span{display:block;width:18px;height:2px;background:var(--cx-deep);position:relative}
+.cx-nav-toggle span::before,.cx-nav-toggle span::after{content:"";position:absolute;left:0;width:18px;height:2px;background:var(--cx-deep)}
+.cx-nav-toggle span::before{top:-6px}
+.cx-nav-toggle span::after{top:6px}
+.cx-mobile-nav{display:none;padding:6px 20px 16px;background:rgba(245,250,246,.98);border-bottom:1px solid var(--cx-line)}
+.cx-mobile-nav.cx-open{display:block}
+.cx-mobile-nav a{display:block;padding:11px 8px;font-size:15px;font-weight:600;border-bottom:1px dashed var(--cx-line)}
+
+/* ---------- shared layout ---------- */
+.cx-section{max-width:1240px;margin:0 auto;padding:64px 24px}
+.cx-eyebrow{
+display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:800;
+letter-spacing:.16em;color:var(--cx-green);text-transform:uppercase;margin-bottom:14px;
+}
+.cx-eyebrow::before{content:"";width:22px;height:2px;background:var(--cx-green);border-radius:2px}
+.cx-h2{font-size:clamp(24px,3vw,34px);color:var(--cx-deep);margin-bottom:12px}
+.cx-h2 em{font-style:normal;color:var(--cx-green)}
+.cx-lead{color:var(--cx-muted);font-size:15.5px;max-width:800px}
+.cx-section-head{margin-bottom:36px}
+
+/* ---------- hero ---------- */
+.cx-hero{
+background:
+radial-gradient(1200px 500px at 85% -10%,rgba(95,216,148,.18),transparent 60%),
+linear-gradient(160deg,var(--cx-deep) 0%,#0f2f1f 55%,#143a26 100%);
+color:#eaf8f0;overflow:hidden;position:relative;
+}
+.cx-hero::after{
+content:"";position:absolute;inset:0;pointer-events:none;
+background-image:radial-gradient(rgba(255,255,255,.05) 1px,transparent 1px);
+background-size:26px 26px;opacity:.6;
+}
+.cx-hero-grid{
+max-width:1240px;margin:0 auto;padding:64px 24px 72px;
+display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);
+gap:56px;align-items:center;position:relative;z-index:1;
+}
+.cx-hero-official{
+display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.14em;
+background:rgba(95,216,148,.14);border:1px solid rgba(95,216,148,.4);color:#a8f0c8;
+padding:6px 14px;border-radius:99px;margin-bottom:22px;
+}
+.cx-hero-official i{width:6px;height:6px;border-radius:50%;background:var(--cx-green-bright);box-shadow:0 0 0 4px rgba(95,216,148,.2)}
+.cx-hero h1{
+font-size:clamp(34px,5.2vw,60px);color:#fff;letter-spacing:.01em;line-height:1.16;
+}
+.cx-hero h1 span{color:var(--cx-green-bright)}
+.cx-hero-slogan{
+margin-top:16px;font-size:clamp(15px,1.6vw,18px);color:#bfe6d1;font-weight:600;letter-spacing:.04em;
+}
+.cx-hero-intro{margin-top:18px;font-size:14.5px;color:#a6c9b7;max-width:560px;line-height:1.9}
+.cx-hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.cx-hero-stats{
+display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:38px;
+border-top:1px solid rgba(255,255,255,.14);padding-top:24px;
+}
+.cx-hero-stat b{display:block;font-size:clamp(22px,2.6vw,30px);color:#fff;font-weight:900;letter-spacing:.01em}
+.cx-hero-stat span{font-size:12px;color:#8fb9a3;letter-spacing:.06em}
+.cx-hero-visual{position:relative}
+.cx-hero-frame{
+border-radius:22px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.42);
+border:1px solid rgba(255,255,255,.14);background:#0a1f15;aspect-ratio:16/11;
+}
+.cx-hero-frame svg{width:100%;height:100%}
+.cx-hero-float{
+position:absolute;left:-22px;bottom:22px;background:#fff;color:var(--cx-ink);
+border-radius:14px;padding:12px 16px;box-shadow:var(--cx-shadow);display:flex;gap:11px;align-items:center;
+max-width:250px;
+}
+.cx-hero-float .cx-hf-ico{
+width:34px;height:34px;border-radius:10px;background:var(--cx-mint);display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.cx-hero-float b{display:block;font-size:13px;color:var(--cx-deep)}
+.cx-hero-float span{font-size:11.5px;color:var(--cx-muted)}
+
+/* ---------- focus strip ---------- */
+.cx-focus{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.cx-focus-card{
+background:#fff;border:1px solid var(--cx-line);border-radius:var(--cx-radius);
+padding:22px 20px;transition:transform .25s,box-shadow .25s,border-color .25s;
+}
+.cx-focus-card:hover{transform:translateY(-4px);box-shadow:var(--cx-shadow);border-color:#b9e2ca}
+.cx-focus-card b{font-size:15.5px;color:var(--cx-deep);display:block;margin-bottom:7px}
+.cx-focus-card p{font-size:13px;color:var(--cx-muted);line-height:1.75}
+.cx-focus-num{font-size:12px;font-weight:900;color:var(--cx-green);letter-spacing:.1em;margin-bottom:10px;display:block}
+
+/* ---------- about / keyword解析 ---------- */
+.cx-about{background:#fff;border-top:1px solid var(--cx-line);border-bottom:1px solid var(--cx-line)}
+.cx-about-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:52px;align-items:start}
+.cx-about h3{font-size:19px;color:var(--cx-deep);margin:26px 0 10px}
+.cx-about p{font-size:14.5px;color:#3d5347;line-height:1.95;margin-bottom:12px}
+.cx-about-aside{
+background:linear-gradient(180deg,#f0faf4,#e8f5ee);border:1px solid var(--cx-line);
+border-radius:20px;padding:26px;
+}
+.cx-about-aside h3{font-size:16px;margin:0 0 14px;color:var(--cx-deep)}
+.cx-about-aside li{
+display:flex;gap:10px;padding:11px 0;border-bottom:1px dashed #cfe6d8;font-size:13.5px;color:#37503f;
+}
+.cx-about-aside li:last-child{border-bottom:none}
+.cx-about-aside li b{color:var(--cx-green);flex-shrink:0}
+.cx-about-aside .cx-mini-stat{display:flex;justify-content:space-between;align-items:baseline;margin-top:16px;padding-top:16px;border-top:1px solid #d3e8db}
+.cx-about-aside .cx-mini-stat b{font-size:22px;color:var(--cx-deep)}
+.cx-about-aside .cx-mini-stat span{font-size:12px;color:var(--cx-muted)}
+
+/* ---------- video list ---------- */
+.cx-videos{display:grid;gap:16px}
+.cx-video{
+background:#fff;border:1px solid var(--cx-line);border-radius:var(--cx-radius);
+padding:20px 22px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px;
+transition:box-shadow .25s,border-color .25s;
+}
+.cx-video:hover{box-shadow:var(--cx-shadow);border-color:#b9e2ca}
+.cx-video-main{min-width:0}
+.cx-video-tags{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:9px}
+.cx-tag{
+font-size:11px;font-weight:700;padding:2px 9px;border-radius:99px;
+background:var(--cx-mint);color:#25714a;letter-spacing:.03em;
+}
+.cx-tag-hot{background:#fdf1d8;color:#9a6b12}
+.cx-video h3{font-size:17px;color:var(--cx-deep);margin-bottom:7px}
+.cx-video p{font-size:13.5px;color:var(--cx-muted);line-height:1.8}
+.cx-video-meta{display:flex;flex-wrap:wrap;gap:14px;margin-top:12px;font-size:12.5px;color:#7c9186}
+.cx-video-meta em{font-style:normal;color:var(--cx-green);font-weight:700}
+.cx-video-ops{display:flex;flex-direction:column;gap:8px;align-items:stretch;justify-content:center}
+.cx-op{
+font-size:12.5px;font-weight:700;padding:7px 14px;border-radius:99px;border:1px solid var(--cx-line);
+background:#fff;color:#3b5a49;white-space:nowrap;transition:background .2s,border-color .2s,color .2s;
+display:inline-flex;align-items:center;justify-content:center;gap:6px;
+}
+.cx-op:hover{border-color:var(--cx-green);color:var(--cx-green)}
+.cx-op.cx-liked{background:var(--cx-green);border-color:var(--cx-green);color:#fff}
+.cx-op.cx-saved{background:#fdf1d8;border-color:#e8c67d;color:#8a5f0e}
+
+/* ---------- feature video with image ---------- */
+.cx-feature{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:34px;align-items:stretch;margin-bottom:34px}
+.cx-feature-media{border-radius:20px;overflow:hidden;border:1px solid var(--cx-line);box-shadow:var(--cx-shadow);background:#0e2b1d}
+.cx-feature-media svg{width:100%;height:100%;object-fit:cover}
+.cx-feature-body{display:flex;flex-direction:column;justify-content:center}
+.cx-feature-body h3{font-size:23px;color:var(--cx-deep);margin:10px 0 12px}
+.cx-feature-body p{font-size:14.5px;color:var(--cx-muted);line-height:1.9}
+.cx-feature-actions{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
+
+/* ---------- topics ---------- */
+.cx-topics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.cx-topic{
+background:#fff;border:1px solid var(--cx-line);border-radius:18px;padding:24px;
+display:flex;flex-direction:column;
+}
+.cx-topic-head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:12px}
+.cx-topic h3{font-size:17px;color:var(--cx-deep)}
+.cx-status{font-size:11px;font-weight:800;padding:3px 10px;border-radius:99px;white-space:nowrap}
+.cx-status-live{background:#def4e7;color:#1f7a4d}
+.cx-status-soon{background:#fdf1d8;color:#8a5f0e}
+.cx-topic p{font-size:13.5px;color:var(--cx-muted);line-height:1.8;margin-bottom:14px}
+.cx-topic ul{margin-top:auto}
+.cx-topic li{
+font-size:13px;color:#3d5347;padding:8px 0 8px 18px;position:relative;border-top:1px dashed var(--cx-line);
+}
+.cx-topic li::before{content:"";position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;background:var(--cx-green)}
+
+/* ---------- authors ---------- */
+.cx-authors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.cx-author{
+background:#fff;border:1px solid var(--cx-line);border-radius:18px;padding:22px;
+display:grid;grid-template-columns:auto minmax(0,1fr);gap:16px;align-items:start;
+transition:transform .25s,box-shadow .25s;
+}
+.cx-author:hover{transform:translateY(-3px);box-shadow:var(--cx-shadow)}
+.cx-avatar{
+width:52px;height:52px;border-radius:16px;display:flex;align-items:center;justify-content:center;
+font-weight:900;font-size:20px;color:#fff;flex-shrink:0;
+}
+.cx-author h3{font-size:16px;color:var(--cx-deep);margin-bottom:4px}
+.cx-author-field{font-size:12px;color:var(--cx-green);font-weight:700;margin-bottom:8px}
+.cx-author p{font-size:13px;color:var(--cx-muted);line-height:1.8}
+.cx-author-foot{display:flex;gap:14px;margin-top:10px;font-size:12px;color:#7c9186}
+.cx-author-foot b{color:var(--cx-deep)}
+.cx-author-more{
+margin-top:12px;font-size:12.5px;font-weight:700;color:var(--cx-green);
+display:inline-flex;align-items:center;gap:5px;
+}
+.cx-author-more:hover{text-decoration:underline;text-underline-offset:3px}
+
+/* ---------- reviews ---------- */
+.cx-reviews{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.cx-review{
+background:#fff;border:1px solid var(--cx-line);border-radius:16px;padding:20px;
+position:relative;
+}
+.cx-review::before{
+content:"“";position:absolute;top:6px;right:18px;font-size:52px;line-height:1;color:#dcefe4;font-family:Georgia,serif;
+}
+.cx-review p{font-size:13.5px;color:#3d5347;line-height:1.85;position:relative;z-index:1}
+.cx-review-foot{display:flex;align-items:center;gap:9px;margin-top:14px}
+.cx-review-avatar{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:#fff;flex-shrink:0}
+.cx-review-foot b{font-size:12.5px;color:var(--cx-deep)}
+.cx-review-foot span{font-size:11px;color:#8ba294;margin-left:auto}
+.cx-stars{color:var(--cx-amber);font-size:12px;letter-spacing:1px}
+
+/* ---------- inspiration / stats ---------- */
+.cx-duo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:34px;align-items:start}
+.cx-inspire li{
+background:#fff;border:1px solid var(--cx-line);border-radius:14px;padding:16px 18px;margin-bottom:12px;
+}
+.cx-inspire b{display:block;font-size:14.5px;color:var(--cx-deep);margin-bottom:5px}
+.cx-inspire p{font-size:13px;color:var(--cx-muted);line-height:1.8}
+.cx-rank{background:#fff;border:1px solid var(--cx-line);border-radius:18px;padding:22px}
+.cx-rank-row{
+display:grid;grid-template-columns:28px minmax(0,1fr) auto;gap:12px;align-items:center;
+padding:12px 0;border-bottom:1px dashed var(--cx-line);font-size:13.5px;
+}
+.cx-rank-row:last-child{border-bottom:none}
+.cx-rank-row i{
+font-style:normal;font-weight:900;font-size:13px;width:26px;height:26px;border-radius:8px;
+display:flex;align-items:center;justify-content:center;background:var(--cx-mint);color:#2a7d52;
+}
+.cx-rank-row:nth-child(1) i{background:var(--cx-green);color:#fff}
+.cx-rank-row:nth-child(2) i{background:#8fd8b1;color:#0d2b1b}
+.cx-rank-row b{color:var(--cx-deep);font-weight:700}
+.cx-rank-row span{font-size:12px;color:#8ba294}
+
+/* ---------- updates + partners ---------- */
+.cx-news{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.cx-news-card{background:#fff;border:1px solid var(--cx-line);border-radius:16px;padding:20px}
+.cx-news-date{font-size:11.5px;font-weight:800;color:var(--cx-green);letter-spacing:.06em}
+.cx-news-card h3{font-size:15px;color:var(--cx-deep);margin:8px 0 7px}
+.cx-news-card p{font-size:13px;color:var(--cx-muted);line-height:1.8}
+.cx-partners{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+.cx-partner{
+font-size:13px;font-weight:700;color:#3d5347;background:#fff;border:1px solid var(--cx-line);
+border-radius:99px;padding:8px 18px;transition:border-color .2s,color .2s,background .2s;
+}
+.cx-partner:hover{border-color:var(--cx-green);color:var(--cx-green);background:var(--cx-mint)}
+
+/* ---------- faq ---------- */
+.cx-faq{max-width:900px}
+.cx-faq details{
+background:#fff;border:1px solid var(--cx-line);border-radius:14px;padding:0 20px;margin-bottom:12px;
+}
+.cx-faq summary{
+cursor:pointer;list-style:none;font-size:15px;font-weight:700;color:var(--cx-deep);
+padding:16px 0;display:flex;justify-content:space-between;align-items:center;gap:14px;
+}
+.cx-faq summary::-webkit-details-marker{display:none}
+.cx-faq summary::after{
+content:"+";font-size:20px;font-weight:400;color:var(--cx-green);transition:transform .25s;
+}
+.cx-faq details[open] summary::after{transform:rotate(45deg)}
+.cx-faq details p{font-size:13.5px;color:var(--cx-muted);line-height:1.9;padding:0 0 18px}
+
+/* ---------- submit cta ---------- */
+.cx-cta{
+background:linear-gradient(135deg,var(--cx-deep),#14412b);color:#eaf8f0;
+border-radius:24px;padding:44px;display:grid;grid-template-columns:minmax(0,1fr) auto;
+gap:28px;align-items:center;
+}
+.cx-cta h2{font-size:clamp(22px,2.6vw,30px);color:#fff;margin-bottom:10px}
+.cx-cta p{font-size:14px;color:#a6c9b7;max-width:620px;line-height:1.9}
+.cx-cta-actions{display:flex;flex-wrap:wrap;gap:12px}
+
+/* ---------- footer ---------- */
+.cx-footer{background:#0b2016;color:#96b8a5;padding:56px 24px 26px;margin-top:20px}
+.cx-footer-grid{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:34px}
+.cx-footer h4{font-size:14px;color:#e2f5ea;margin-bottom:14px;letter-spacing:.04em}
+.cx-footer li{font-size:13px;padding:5px 0}
+.cx-footer li a:hover{color:var(--cx-green-bright)}
+.cx-footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.cx-footer-brand b{color:#fff;font-size:17px}
+.cx-footer p{font-size:13px;line-height:1.9}
+.cx-footer-bottom{
+max-width:1240px;margin:34px auto 0;padding-top:20px;border-top:1px solid #1d3a2a;
+display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;font-size:12px;color:#6f9382;
+}
+
+/* ---------- toast & modal ---------- */
+.cx-toast{
+position:fixed;left:50%;bottom:34px;transform:translate(-50%,20px);
+background:var(--cx-deep);color:#eafff3;padding:11px 22px;border-radius:99px;
+font-size:13.5px;font-weight:600;box-shadow:0 14px 34px rgba(0,0,0,.3);
+opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;z-index:200;
+}
+.cx-toast.cx-show{opacity:1;transform:translate(-50%,0)}
+.cx-modal{
+position:fixed;inset:0;background:rgba(9,28,19,.55);backdrop-filter:blur(4px);
+display:none;align-items:center;justify-content:center;padding:22px;z-index:210;
+}
+.cx-modal.cx-open{display:flex}
+.cx-modal-box{
+background:#fff;border-radius:20px;max-width:520px;width:100%;padding:30px;
+position:relative;box-shadow:0 30px 80px rgba(0,0,0,.35);max-height:88vh;overflow:auto;
+}
+.cx-modal-box h3{font-size:19px;color:var(--cx-deep);margin-bottom:10px}
+.cx-modal-box p{font-size:13.5px;color:var(--cx-muted);line-height:1.85;margin-bottom:14px}
+.cx-modal-box textarea{
+width:100%;min-height:110px;border:1px solid var(--cx-line);border-radius:12px;padding:12px;
+font-family:inherit;font-size:13.5px;resize:vertical;color:var(--cx-ink);
+}
+.cx-modal-box textarea:focus{outline:none;border-color:var(--cx-green);box-shadow:0 0 0 3px rgba(95,216,148,.2)}
+.cx-modal-close{
+position:absolute;top:14px;right:16px;font-size:22px;line-height:1;color:#9db3a6;
+width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+}
+.cx-modal-close:hover{background:var(--cx-mint);color:var(--cx-deep)}
+.cx-modal-actions{display:flex;gap:10px;justify-content:flex-end;margin-top:16px}
+.cx-share-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:6px}
+.cx-share-grid button{
+border:1px solid var(--cx-line);border-radius:12px;padding:14px 8px;font-size:13px;font-weight:700;color:#3d5347;
+}
+.cx-share-grid button:hover{border-color:var(--cx-green);color:var(--cx-green);background:var(--cx-mint)}
+
+/* ---------- to top ---------- */
+.cx-totop{
+position:fixed;right:22px;bottom:26px;width:46px;height:46px;border-radius:50%;
+background:var(--cx-deep);color:#eafff3;display:flex;align-items:center;justify-content:center;
+box-shadow:0 12px 30px rgba(11,32,22,.35);opacity:0;pointer-events:none;transition:opacity .25s,transform .2s;
+z-index:120;
+}
+.cx-totop.cx-show{opacity:1;pointer-events:auto}
+.cx-totop:hover{transform:translateY(-3px)}
+
+/* ---------- responsive ---------- */
+@media(max-width:1024px){
+.cx-hero-grid{grid-template-columns:1fr;gap:40px}
+.cx-about-grid{grid-template-columns:1fr;gap:34px}
+.cx-feature{grid-template-columns:1fr}
+.cx-focus{grid-template-columns:repeat(2,minmax(0,1fr))}
+.cx-topics{grid-template-columns:repeat(2,minmax(0,1fr))}
+.cx-news{grid-template-columns:repeat(2,minmax(0,1fr))}
+.cx-duo{grid-template-columns:1fr}
+.cx-footer-grid{grid-template-columns:1fr 1fr}
+.cx-cta{grid-template-columns:1fr;padding:34px}
+}
+@media(max-width:760px){
+.cx-nav{display:none}
+.cx-search{display:none}
+.cx-nav-toggle{display:flex}
+.cx-header-tools .cx-btn-primary{display:none}
+.cx-author{grid-template-columns:1fr}
+.cx-authors{grid-template-columns:1fr}
+.cx-reviews{grid-template-columns:1fr}
+.cx-video{grid-template-columns:1fr}
+.cx-video-ops{flex-direction:row;flex-wrap:wrap;justify-content:flex-start}
+.cx-hero-stats{gap:10px}
+.cx-hero-float{left:12px;bottom:12px;max-width:210px}
+.cx-focus{grid-template-columns:1fr}
+.cx-topics,.cx-news{grid-template-columns:1fr}
+.cx-footer-grid{grid-template-columns:1fr}
+.cx-announce{font-size:12px;text-align:center}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="cx-topstack">
+  <div class="cx-announce">
+    <span class="cx-announce-badge">官方发布</span>
+    <span>「城市慢镜」秋季片单上线 12 部新作，4K 修复专区同步开放；创作者扶持计划第 6 期报名进行中。</span>
+    <a href="#cx-updates">查看更新详情</a>
+  </div>
+  <header class="cx-header">
+    <div class="cx-header-inner">
+      <a class="cx-brand" href="#cx-top" aria-label="小草影院首页">
+        <span class="cx-brand-mark">
+          <svg viewBox="0 0 64 64" width="38" height="38" role="img" aria-label="小草影院品牌标识">
+            <rect width="64" height="64" rx="14" fill="#0f2e1e"/>
+            <path d="M20 46c0-14 8-24 24-28-4 8-6 16-6 22 0 4 1 6 3 8-8 2-16 1-21-2z" fill="#48c78c"/>
+            <path d="M26 30c4 1 7 4 8 9" stroke="#e8f8ef" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span>
+          <span class="cx-brand-name">小草<span>影院</span></span>
+          <span class="cx-brand-sub">GRASS CINEMA · 官方</span>
+        </span>
+      </a>
+      <nav class="cx-nav" aria-label="主导航">
+        <a href="#cx-focus">焦点</a>
+        <a href="#cx-keyword">品牌解析</a>
+        <a href="#cx-videos">片库</a>
+        <a href="#cx-topics">专题</a>
+        <a href="#cx-authors">创作者</a>
+        <a href="#cx-reviews">口碑</a>
+        <a href="#cx-faq">帮助</a>
+      </nav>
+      <div class="cx-header-tools">
+        <div class="cx-search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M16.5 16.5 21 21"/></svg>
+          <input type="search" id="cx-search-input" placeholder="搜索片名、创作者、专栏" aria-label="站内搜索">
+          <div class="cx-search-tip" id="cx-search-tip">输入关键词，即可筛选站内精品内容。</div>
+        </div>
+        <button class="cx-btn cx-btn-primary" data-cx-modal="submit">投稿入口</button>
+        <button class="cx-nav-toggle" id="cx-nav-toggle" aria-label="展开导航" aria-expanded="false"><span></span></button>
+      </div>
+    </div>
+    <div class="cx-mobile-nav" id="cx-mobile-nav">
+      <a href="#cx-focus">焦点内容</a>
+      <a href="#cx-keyword">品牌与关键词解析</a>
+      <a href="#cx-videos">片库索引</a>
+      <a href="#cx-topics">专题企划</a>
+      <a href="#cx-authors">创作者矩阵</a>
+      <a href="#cx-reviews">用户口碑</a>
+      <a href="#cx-updates">企业动态</a>
+      <a href="#cx-faq">常见问题</a>
+    </div>
+  </header>
+</div>
+
+<main id="cx-top">
+
+  <!-- HERO -->
+  <section class="cx-hero" aria-labelledby="cx-hero-title">
+    <div class="cx-hero-grid">
+      <div class="cx-hero-copy">
+        <span class="cx-hero-official"><i></i>官方网站 · 品牌门户</span>
+        <h1 id="cx-hero-title">小草影院<span>在线观看免费完整版</span></h1>
+        <p class="cx-hero-slogan">让好内容像草一样，安静生长，随处可见。</p>
+        <p class="cx-hero-intro">小草影院是一家以高清正版影视内容为核心的视频品牌官网，专注为影迷、创作者与内容团队搭建值得信赖的观看与创作社区。我们把片单做成有温度的索引，把每一部作品放进可以反复回看的位置。</p>
+        <div class="cx-hero-actions">
+          <a class="cx-btn cx-btn-primary" href="#cx-videos">进入片库</a>
+          <a class="cx-btn cx-btn-ghost" href="#cx-topics">浏览专题</a>
+          <button class="cx-btn cx-btn-ghost" data-cx-modal="share">分享官网</button>
+        </div>
+        <div class="cx-hero-stats">
+          <div class="cx-hero-stat"><b data-cx-count="12860">0</b><span>部高清正版作品</span></div>
+          <div class="cx-hero-stat"><b data-cx-count="4200">0</b><span>位入驻创作者</span></div>
+          <div class="cx-hero-stat"><b data-cx-count="98">0</b><span>% 用户口碑推荐度</span></div>
+        </div>
+      </div>
+      <div class="cx-hero-visual">
+        <div class="cx-hero-frame">
+          <svg viewBox="0 0 640 440" role="img" aria-label="小草影院首屏主视觉：夜色放映厅与草叶光影">
+            <defs>
+              <linearGradient id="cxHeroSky" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#0b2418"/>
+                <stop offset="1" stop-color="#143f2a"/>
+              </linearGradient>
+              <linearGradient id="cxHeroScreen" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#5fd894"/>
+                <stop offset="1" stop-color="#2a8f5d"/>
+              </linearGradient>
+              <radialGradient id="cxHeroGlow" cx="50%" cy="35%" r="65%">
+                <stop offset="0" stop-color="#a8f0c8" stop-opacity=".55"/>
+                <stop offset="1" stop-color="#a8f0c8" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <rect width="640" height="440" fill="url(#cxHeroSky)"/>
+            <ellipse cx="320" cy="160" rx="240" ry="150" fill="url(#cxHeroGlow)"/>
+            <rect x="118" y="86" width="404" height="216" rx="14" fill="#0a1f15" stroke="#2f6a4c" stroke-width="3"/>
+            <rect x="134" y="102" width="372" height="184" rx="8" fill="url(#cxHeroScreen)" opacity=".85"/>
+            <path d="M286 160c22-6 44 4 52 24 6 15 1 30-12 38-16 10-37 6-47-10-11-17-8-42 7-52z" fill="#0b2418" opacity=".72"/>
+            <path d="M306 176v72l56-36z" fill="#e8f8ef"/>
+            <g stroke="#5fd894" stroke-width="2" fill="none" opacity=".8">
+              <path d="M60 372c40-46 84-58 128-36"/>
+              <path d="M84 392c34-50 78-64 122-42"/>
+              <path d="M556 366c-38-44-82-56-126-34"/>
+            </g>
+            <g fill="#48c78c" opacity=".75">
+              <path d="M92 372c-14-30-4-56 20-70 6 26-2 52-20 70z"/>
+              <path d="M520 368c14-32 6-58-18-74-8 26-2 54 18 74z"/>
+            </g>
+            <rect x="0" y="368" width="640" height="72" fill="#071810"/>
+            <g fill="#143f2a">
+              <rect x="150" y="344" width="70" height="30" rx="8"/>
+              <rect x="250" y="332" width="86" height="42" rx="10"/>
+              <rect x="366" y="340" width="76" height="34" rx="9"/>
+              <rect x="468" y="330" width="60" height="44" rx="10"/>
+            </g>
+          </svg>
+        </div>
+        <div class="cx-hero-float">
+          <span class="cx-hf-ico">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3fae72" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          </span>
+          <span><b>本周新增 46 部</b><span>高清修复与官方片单同步更新</span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOCUS -->
+  <section class="cx-section" id="cx-focus" aria-labelledby="cx-focus-title">
+    <div class="cx-section-head">
+      <span class="cx-eyebrow">焦点推荐</span>
+      <h2 class="cx-h2" id="cx-focus-title">小草影院官网本周<em>重点内容</em></h2>
+      <p class="cx-lead">编辑部从片库、专题与社区投稿中挑出四条值得先看的内容线。它们分别代表观看、解析、创作与互动四个方向，也是小草影院内容生态持续运营的四个支点。</p>
+    </div>
+    <div class="cx-focus">
+      <article class="cx-focus-card">
+        <span class="cx-focus-num">01 / 观看</span>
+        <b>秋季修复片单：老片的第二次呼吸</b>
+        <p>12 部经典作品完成 4K 修复，逐帧标注了原始胶片划痕与调色方案，适合想认真看电影的人。</p>
+      </article>
+      <article class="cx-focus-card">
+        <span class="cx-focus-num">02 / 解析</span>
+        <b>一场关于「慢镜头」的影像实验</b>
+        <p>三位剪辑师用同一段素材做了三种时长处理，完整对照视频与时间轴笔记已上线专题页。</p>
+      </article>
+      <article class="cx-focus-card">
+        <span class="cx-focus-num">03 / 创作</span>
+        <b>创作者扶持计划第 6 期开放报名</b>
+        <p>面向纪录、短片与影评三类方向，提供拍摄补贴、官方推荐位与成片发行支持。</p>
+      </article>
+      <article class="cx-focus-card">
+        <span class="cx-focus-num">04 / 社区</span>
+        <b>「我的一分钟」全民影像挑战</b>
+        <p>用一分钟讲一个真实瞬间。活动收到 1,840 份投稿，投票通道与精选合辑同步开放。</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- KEYWORD / ABOUT -->
+  <section class="cx-section cx-about" id="cx-keyword" aria-labelledby="cx-keyword-title">
+    <div class="cx-section-head">
+      <span class="cx-eyebrow">品牌与关键词解析</span>
+      <h2 class="cx-h2" id="cx-keyword-title">小草影院<em>是什么</em>，以及我们如何理解「免费完整版」</h2>
+      <p class="cx-lead">这一段写给第一次来到这里的人：我们把品牌定位、内容标准和运营方式一次讲清楚，也解释为什么小草影院坚持做正版高清与可持续的社区。</p>
+    </div>
+    <div class="cx-about-grid">
+      <div>
+        <h3>一、品牌定位：一家把「片单」当作作品的视频官网</h3>
+        <p>小草影院官方网站不是一个把内容堆满首页的聚合站，而是一家把片单当作作品来经营的视频品牌。我们相信观看是有顺序的：先有清晰的主题，再有可信的片源，最后才是推荐。因此站内的每一组内容都围绕一个明确的方向组织，从「秋季修复片单」到「城市慢镜」，从「一分钟影像挑战」到「剪辑对照实验」，用户进入任何一页都能知道自己正在看什么、为什么值得看。</p>
+        <p>作为一家持续运营的企业级内容平台，小草影院把版权合规放在第一位。站内标注为高清正版的作品，均来自官方授权或创作者本人授权发布；我们为每部作品保留来源说明与授权信息，并在页面中提供清晰的举报与反馈入口。这也是「在线观看免费完整版」在本站的真实含义：免费指的是平台不设观看门槛，完整指的是不剪辑、不插播、不拆分关键段落，而不是绕过授权的捷径。</p>
+        <h3>二、内容标准：高清、完整、可回看</h3>
+        <p>技术层面，小草影院对上传内容执行统一标准：分辨率不低于 1080P，重点作品提供 4K 与 HDR 版本；音频统一做响度校准，避免不同作品之间忽大忽小；字幕支持中文简体、繁体与英文三轨切换，纪录片与访谈类内容额外提供时间轴章节。我们把这些工作称为「内容的基础设施」，因为它们不显眼，却决定了观看体验的下限。</p>
+        <p>内容层面，站内片库按纪录、短片、访谈、影评、幕后五条主线组织。每条主线都有固定的编辑负责人，负责更新节奏与质量把关。我们不追求数量上的膨胀，而是保持每周稳定更新，让用户可以预期「这周会看到什么」。这种稳定感是小草影院区别于一次性资源站的地方，也是品牌口碑得以积累的原因。</p>
+        <h3>三、社区与创作者：让创作被看见，也被认真对待</h3>
+        <p>小草影院的社区由创作者与观众共同构成。创作者在这里发布作品、记录创作过程、参与专题企划；观众通过点赞、收藏、评论与投票参与内容筛选。站内的「创作灵感」板块每周整理热门选题、脚本结构与剪辑思路，帮助新入驻的创作者快速找到方向；「创作者扶持计划」则提供拍摄补贴、官方推荐位与成片发行支持，目前已进行到第 6 期。</p>
+        <p>我们同样重视真实与温暖。站内设有「故事与随笔」区域，鼓励创作者写下镜头之外的部分：一次失败的拍摄、一段反复修改的旁白、一个被剪掉的结尾。这些文字不会带来即时流量，却让社区更像一个可以长期停留的地方。企业动态、更新日志与 FAQ 帮助页面保持透明，用户能清楚知道平台在做什么、改了什么、接下来准备做什么。</p>
+        <h3>四、我们如何持续运营</h3>
+        <p>小草影院采用编辑推荐与数据反馈并行的运营机制：编辑部负责专题与片单的策划，数据系统负责观察完播率、收藏率与回访率，两者每周对齐一次。我们不以单条播放量作为唯一指标，而更关注「看完的人是否愿意留下」。这也是站内设置「口碑榜」而非单纯「热度榜」的原因：一部作品的价值，不应该只由点击数决定。</p>
+        <p>面向未来，小草影院会继续在三个方向投入：一是高清修复与正版引进，二是创作者培养与专题共创，三是社区互动工具的打磨。我们希望这家视频品牌官网不只是一个观看入口，而是一个可以陪伴用户成长的内容空间。无论你是偶尔来看一部片子的观众，还是准备发布第一支作品的创作者，这里都为你保留了一个安静的位置。</p>
+      </div>
+      <aside class="cx-about-aside">
+        <h3>核心数据与承诺</h3>
+        <ul>
+          <li><b>正版</b><span>站内高清作品均标注授权来源，支持来源核验。</span></li>
+          <li><b>完整</b><span>不拆分关键段落，不插播广告，支持章节回看。</span></li>
+          <li><b>高清</b><span>1080P 起步，重点作品提供 4K 与 HDR 版本。</span></li>
+          <li><b>社区</b><span>创作者与观众共同参与内容筛选与专题共创。</span></li>
+        </ul>
+        <div class="cx-mini-stat"><b>6 期</b><span>创作者扶持计划已开展</span></div>
+        <div class="cx-mini-stat"><b>每周</b><span>固定片单与专题更新节奏</span></div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- VIDEOS -->
+  <section class="cx-section" id="cx-videos" aria-labelledby="cx-videos-title">
+    <div class="cx-section-head">
+      <span class="cx-eyebrow">片库索引</span>
+      <h2 class="cx-h2" id="cx-videos-title">小草影院<em>精品内容</em>片库</h2>
+      <p class="cx-lead">以下为本周重点推荐与片库索引。重点条目配独立封面，其余采用文字摘要列表，便于快速浏览与筛选。</p>
+    </div>
+
+    <div class="cx-feature">
+      <div class="cx-feature-media">
+        <svg viewBox="0 0 640 360" role="img" aria-label="秋季修复片单封面：胶片卷轴与金色落叶">
+          <defs>
+            <linearGradient id="cxFilmBg" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#f3e3c4"/>
+              <stop offset="1" stop-color="#e2b978"/>
+            </linearGradient>
+            <linearGradient id="cxFilmStrip" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#3a2a14"/>
+              <stop offset="1" stop-color="#6b4a1e"/>
+            </linearGradient>
+          </defs>
+          <rect width="640" height="360" fill="url(#cxFilmBg)"/>
+          <circle cx="520" cy="82" r="54" fill="#f7edd8" opacity=".85"/>
+          <path d="M0 300c90-40 160-38 250-6s170 30 260-4 130-22 130-22v92H0z" fill="#c99b52" opacity=".5"/>
+          <g transform="translate(60 96)">
+            <rect x="0" y="0" width="300" height="168" rx="10" fill="url(#cxFilmStrip)"/>
+            <g fill="#f3e3c4">
+              <rect x="10" y="8" width="12" height="10" rx="2"/><rect x="34" y="8" width="12" height="10" rx="2"/><rect x="58" y="8" width="12" height="10" rx="2"/><rect x="82" y="8" width="12" height="10" rx="2"/><rect x="106" y="8" width="12" height="10" rx="2"/><rect x="130" y="8" width="12" height="10" rx="2"/><rect x="154" y="8" width="12" height="10" rx="2"/><rect x="178" y="8" width="12" height="10" rx="2"/><rect x="202" y="8" width="12" height="10" rx="2"/><rect x="226" y="8" width="12" height="10" rx="2"/><rect x="250" y="8" width="12" height="10" rx="2"/><rect x="274" y="8" width="12" height="10" rx="2"/>
+              <rect x="10" y="150" width="12" height="10" rx="2"/><rect x="34" y="150" width="12" height="10" rx="2"/><rect x="58" y="150" width="12" height="10" rx="2"/><rect x="82" y="150" width="12" height="10" rx="2"/><rect x="106" y="150" width="12" height="10" rx="2"/><rect x="130" y="150" width="12" height="10" rx="2"/><rect x="154" y="150" width="12" height="10" rx="2"/><rect x="178" y="150" width="12" height="10" rx="2"/><rect x="202" y="150" width="12" height="10" rx="2"/><rect x="226" y="150" width="12" height="10" rx="2"/><rect x="250" y="150" width="12" height="10" rx="2"/><rect x="274" y="150" width="12" height="10" rx="2"/>
+            </g>
+            <rect x="16" y="26" width="268" height="116" rx="6" fill="#f7edd8"/>
+            <path d="M104 52c22 0 40 16 44 38 3 16-8 30-24 33-17 3-33-8-38-24-6-18 3-40 18-47z" fill="#c99b52" opacity=".55"/>
+            <path d="M150 66v58l44-29z" fill="#3a2a14"/>
+          </g>
+          <g fill="#a9762f" opacity=".8">
+            <path d="M470 250c-16-18-14-42 4-56 8 18 6 40-4 56z"/>
+            <path d="M512 268c-6-22 4-42 26-50-2 22-12 40-26 50z"/>
+          </g>
+        </svg>
+      </div>
+      <div class="cx-feature-body">
+        <div class="cx-video-tags"><span class="cx-tag cx-tag-hot">本周重点</span><span class="cx-tag">纪录</span><span class="cx-tag">4K 修复</span></div>
+        <h3>秋季修复片单：老片的第二次呼吸</h3>
+        <p>我们用三个月时间重扫了 12 部经典作品的原始胶片，逐帧修复划痕、重新校准色彩，并记录了每一次调色取舍。影片之外，我们还拍摄了修复师的访谈，讲清楚「修复不是翻新，而是尽量回到它本来的样子」。</p>
+        <div class="cx-video-meta">
+          <span>作者 <em>胶片修复组</em></span><span>播放 86.4 万</span><span>点赞 3.2 万</span><span>收藏 1.8 万</span>
+        </div>
+        <div class="cx-feature-actions">
+          <button class="cx-op" data-cx-like>点赞</button>
+          <button class="cx-op" data-cx-save>收藏</button>
+          <button class="cx-op" data-cx-modal="share">分享</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="cx-videos" id="cx-video-list">
+      <article class="cx-video">
+        <div class="cx-video-main">
+          <div class="cx-video-tags"><span class="cx-tag">短片</span><span class="cx-tag">原创</span></div>
+          <h3>城市慢镜：清晨六点的菜市场</h3>
+          <p>用 48 帧慢速记录一个菜市场从安静到喧闹的九十分钟，保留了摊主的方言原声与秤砣落下的声音。</p>
+          <div class="cx-video-meta"><span>作者 <em>林间剪辑室</em></span><span>播放 24.1 万</span><span>点赞 9,860</span><span>收藏 4,120</span></div>
+        </div>
+        <div class="cx-video-ops">
+          <button class="cx-op" data-cx-like>点赞</button>
+          <button class="cx-op" data-cx-save>收藏</button>
+        </div>
+      </article>
+      <article class="cx-video">
+        <div class="cx-video-main">
+          <div class="cx-video-tags"><span class="cx-tag">影评</span><span class="cx-tag cx-tag-hot">热播</span></div>
+          <h3>为什么慢镜头不是拖延：三种时长处理对照</h3>
+          <p>同一段 30 秒素材，分别做成 8 秒、30 秒与 2 分钟版本，逐段拆解节奏、呼吸感与观众注意力曲线。</p>
+          <div class="cx-video-meta"><span>作者 <em>周帧帧</em></span><span>播放 41.7 万</span><span>点赞 1.6 万</span><span>收藏 7,430</span></div>
+        </div>
+        <div class="cx-video-ops">
+          <button class="cx-op" data-cx-like>点赞</button>
+          <button class="cx-op" data-cx-save>收藏</button>
+        </div>
+      </article>
+      <article class="cx-video">
+        <div class="cx-video-main">
+          <div class="cx-video-tags"><span class="cx-tag">访谈</span><span class="cx-tag">创作幕后</span></div>
+          <h3>访谈摘录：拍了七年纪录片，我学会等待</h3>
+          <p>与纪录片导演谈「等待」这件事：等一场雨、等一个人开口、等自己在剪辑台前放下执念。</p>
+          <div class="cx-video-meta"><span>作者 <em>草间访谈</em></span><span>播放 18.9 万</span><span>点赞 7,220</span><span>收藏 3,050</span></div>
+        </div>
+        <div class="cx-video-ops">
+          <button class="cx-op" data-cx-like>点赞</button>
+          <button class="cx-op" data-cx-save>收藏</button>
+        </div>
+      </article>
+      <article class="cx-video">
+        <div class="cx-video-main">
+          <div class="cx-video-tags"><span class="cx-tag">教程</span><span class="cx-tag">实用技巧</span></div>
+          <h3>剪辑干货：让旁白不尴尬的五个改稿动作</h3>
+          <p>从断句、删形容词、换动词到重录关键词，逐步演示一段旁白如何从「像念稿」变成「像说话」。</p>
+          <div class="cx-video-meta"><span>作者 <em>声画实验室</em></span><span>播放 33.5 万</span><span>点赞 1.2 万</span><span>收藏 8,640</span></div>
+        </div>
+        <div class="cx-video-ops">
+          <button class="cx-op" data-cx-like>点赞</button>
+          <button class="cx-op" data-cx-save>收藏</button>
+        </div>
+      </article>
+      <article class="cx-video">
+        <div class="cx-video-main">
+          <div class="cx-video-tags"><span class="cx-tag">纪录</span><span class="cx-tag">在地文化</span></div>
+          <h3>老手艺人：一把竹椅的七十二道工序</h3>
+          <p>跟拍一位做了四十年竹椅的老师傅，从选竹、破篾到上漆，完整记录一件日用品背后的时间成本。</p>
+          <div class="cx-video-meta"><span>作者 <em>南巷影像</em></span><span>播放 27.3 万</span><span>点赞 1.1 万</span><span>收藏 5,260</span></div>
+        </div>
+        <div class="cx-video-ops">
+          <button class="cx-op" data-cx-like>点赞</button>
+          <button class="cx-op" data-cx-save>收藏</button>
+        </div>
+      </article>
+      <article class="cx-video">
+        <div class="cx-video-main">
+          <div class="cx-video-tags"><span class="cx-tag">短片</span><span class="cx-tag">治愈</span></div>
+          <h3>一分钟影像：把阳台改造成小型放映角</h3>
+          <p>投稿作品，用一块旧床单、一台投影和两把折叠椅，在自家阳台完成了第一次露天放映。</p>
+          <div class="cx-video-meta"><span>作者 <em>阿栗同学</em></span><span>播放 12.6 万</span><span>点赞 6,180</span><span>收藏 2,740</span></div>
+        </div>
+        <div class="cx-video-ops">
+          <button class="cx-op" data-cx-like>点赞</button>
+          <button class="cx-op" data-cx-save>收藏</button>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- TOPICS -->
+  <section class="cx-section" id="cx-topics" aria-labelledby="cx-topics-title" style="background:#fff;border-top:1px solid var(--cx-line);border-bottom:1px solid var(--cx-line)">
+    <div class="cx-section-head">
+      <span class="cx-eyebrow">专题企划</span>
+      <h2 class="cx-h2" id="cx-topics-title">小草影院<em>专题企划</em>与共创计划</h2>
+      <p class="cx-lead">专题是小草影院组织内容的方式。每个专题对应一个明确的问题意识，由编辑部发起、创作者参与、观众共同完成。</p>
+    </div>
+    <div class="cx-topics">
+      <article class="cx-topic">
+        <div class="cx-topic-head"><h3>城市慢镜</h3><span class="cx-status cx-status-live">更新中</span></div>
+        <p>关于城市与时间的系列纪录：菜市场、末班车、凌晨便利店、雨后的老街。</p>
+        <ul>
+          <li>清晨六点的菜市场</li>
+          <li>末班地铁上的十张脸</li>
+          <li>一条老街的十二时辰</li>
+        </ul>
+      </article>
+      <article class="cx-topic">
+        <div class="cx-topic-head"><h3>剪辑对照实验</h3><span class="cx-status cx-status-live">更新中</span></div>
+        <p>同一素材、不同处理，看看节奏如何改变情绪。每期邀请两位剪辑师同题创作。</p>
+        <ul>
+          <li>慢镜头不是拖延</li>
+          <li>同一段对白的三种剪法</li>
+          <li>无配乐版本的情绪落差</li>
+        </ul>
+      </article>
+      <article class="cx-topic">
+        <div class="cx-topic-head"><h3>修复档案</h3><span class="cx-status cx-status-soon">即将上线</span></div>
+        <p>记录老片修复的每一步：扫描、去痕、调色、校声，以及修复师面对的取舍。</p>
+        <ul>
+          <li>原始胶片的划痕处理</li>
+          <li>色彩回归的参考标准</li>
+          <li>修复师的一天</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- AUTHORS -->
+  <section class="cx-section" id="cx-authors" aria-labelledby="cx-authors-title">
+    <div class="cx-section-head">
+      <span class="cx-eyebrow">创作者矩阵</span>
+      <h2 class="cx-h2" id="cx-authors-title">小草影院的<em>创作者</em>与长期伙伴</h2>
+      <p class="cx-lead">他们来自纪录、剪辑、影评与生活记录等不同方向，共同构成了小草影院的内容生态。</p>
+    </div>
+    <div class="cx-authors">
+      <article class="cx-author">
+        <div class="cx-avatar" style="background:linear-gradient(135deg,#3fae72,#1d7a4d)">林</div>
+        <div>
+          <h3>林间剪辑室</h3>
+          <div class="cx-author-field">城市纪录 · 慢镜短片</div>
+          <p>入行八年，做过广告剪辑，也拍过无人问津的长镜头。坚持用原声记录城市，相信真实的声音比配乐更有力量。在小草影院连载「城市慢镜」系列。</p>
+          <div class="cx-author-foot"><span>作品 <b>86</b></span><span>粉丝 <b>12.4 万</b></span></div>
+          <button class="cx-author-more" data-cx-modal="author" data-author="林间剪辑室">查看作者档案 →</button>
+        </div>
+      </article>
+      <article class="cx-author">
+        <div class="cx-avatar" style="background:linear-gradient(135deg,#e0a63c,#a9762f)">周</div>
+        <div>
+          <h3>周帧帧</h3>
+          <div class="cx-author-field">剪辑教学 · 影像解析</div>
+          <p>剪辑师、课程讲师。擅长把抽象的节奏问题拆成可以练习的动作，每期视频都附带一张可下载的时间轴笔记。相信好剪辑是让人感觉不到剪辑。</p>
+          <div class="cx-author-foot"><span>作品 <b>124</b></span><span>粉丝 <b>18.7 万</b></span></div>
+          <button class="cx-author-more" data-cx-modal="author" data-author="周帧帧">查看作者档案 →</button>
+        </div>
+      </article>
+      <article class="cx-author">
+        <div class="cx-avatar" style="background:linear-gradient(135deg,#5a8fd8,#2f5fa8)">草</div>
+        <div>
+          <h3>草间访谈</h3>
+          <div class="cx-author-field">人物访谈 · 文化观察</div>
+          <p>做过杂志记者，现在用镜头继续做访谈。问题不多，但每个都愿意等回答。相信一次好的访谈不是获取信息，而是让一个人愿意多说一点。</p>
+          <div class="cx-author-foot"><span>作品 <b>57</b></span><span>粉丝 <b>9.2 万</b></span></div>
+          <button class="cx-author-more" data-cx-modal="author" data-author="草间访谈">查看作者档案 →</button>
+        </div>
+      </article>
+      <article class="cx-author">
+        <div class="cx-avatar" style="background:linear-gradient(135deg,#b06fbf,#7a3f8c)">阿</div>
+        <div>
+          <h3>阿栗同学</h3>
+          <div class="cx-author-field">生活记录 · 治愈影像</div>
+          <p>普通上班族，周末拍片。擅长在很小的空间里找到拍摄的可能，阳台、厨房、通勤路上都是片场。希望影像能让人松一口气。</p>
+          <div class="cx-author-foot"><span>作品 <b>31</b></span><span>粉丝 <b>5.6 万</b></span></div>
+          <button class="cx-author-more" data-cx-modal="author" data-author="阿栗同学">查看作者档案 →</button>
+        </div>
+      </article>
+      <article class="cx-author">
+        <div class="cx-avatar" style="background:linear-gradient(135deg,#3aa6a6,#1f6f6f)">南</div>
+        <div>
+          <h3>南巷影像</h3>
+          <div class="cx-author-field">在地文化 · 手艺人纪录</div>
+          <p>长期拍摄手工艺与地方生活，习惯在一件事物上停留很久。镜头克制，少用旁白，尽量让被拍摄者自己说话。作品多次入选平台季度精选。</p>
+          <div class="cx-author-foot"><span>作品 <b>64</b></span><span>粉丝 <b>11.3 万</b></span></div>
+          <button class="cx-author-more" data-cx-modal="author" data-author="南巷影像">查看作者档案 →</button>
+        </div>
+      </article>
+      <article class="cx-author">
+        <div class="cx-avatar" style="background:linear-gradient(135deg,#d86a5a,#a53f31)">胶</div>
+        <div>
+          <h3>胶片修复组</h3>
+          <div class="cx-author-field">修复 · 资料整理</div>
+          <p>由三位修复师组成的团队，负责站内经典作品的扫描、去痕与调色。工作节奏慢，但每一帧都留有记录。定期发布修复日志与对照片段。</p>
+          <div class="cx-author-foot"><span>作品 <b>42</b></span><span>粉丝 <b>7.8 万</b></span></div>
+          <button class="cx-author-more" data-cx-modal="author" data-author="胶片修复组">查看作者档案 →</button>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- REVIEWS + RANK -->
+  <section class="cx-section" id="cx-reviews" aria-labelledby="cx-reviews-title" style="background:#fff;border-top:1px solid var(--cx-line);border-bottom:1px solid var(--cx-line)">
+    <div class="cx-section-head">
+      <span class="cx-eyebrow">用户口碑</span>
+      <h2 class="cx-h2" id="cx-reviews-title">观众眼中的<em>小草影院</em></h2>
+      <p class="cx-lead">下面是来自社区的真实评价，语气、长度与关注点各不相同。口碑是我们最看重的指标之一。</p>
+    </div>
+    <div class="cx-reviews">
+      <article class="cx-review">
+        <p>第一次在站内完整看完一部纪录片，中途没有插播，字幕时间轴也对得很准。看完顺手收藏了修复片单，周末准备二刷。</p>
+        <div class="cx-review-foot"><span class="cx-review-avatar" style="background:#3fae72">李</span><b>李同学</b><span class="cx-stars">★★★★★</span></div>
+      </article>
+      <article class="cx-review">
+        <p>我是做剪辑的，站内的「剪辑对照实验」专题帮了大忙。同一段素材不同处理的对照很直观，比看十篇教程都有用。</p>
+        <div class="cx-review-foot"><span class="cx-review-avatar" style="background:#5a8fd8">陈</span><b>陈剪辑</b><span class="cx-stars">★★★★★</span></div>
+      </article>
+      <article class="cx-review">
+        <p>页面信息密度高但不吵，片单分类清楚。唯一希望的是移动端能增加一个「继续观看」入口，有时候找上次没看完的片子要多点两下。</p>
+        <div class="cx-review-foot"><span class="cx-review-avatar" style="background:#e0a63c">王</span><b>王先生</b><span class="cx-stars">★★★★☆</span></div>
+      </article>
+      <article class="cx-review">
+        <p>投稿过一次短片，编辑部给了很具体的反馈，不是模板回复。后来作品被放进专题推荐，那种被认真对待的感觉很难得。</p>
+        <div class="cx-review-foot"><span class="cx-review-avatar" style="background:#b06fbf">阿</span><b>阿栗同学</b><span class="cx-stars">★★★★★</span></div>
+      </article>
+      <article class="cx-review">
+        <p>修复专区是我留在本站的原因。能看到修复前后的对照，也能知道每一步做了什么，这种透明度在其他地方很少见。</p>
+        <div class="cx-review-foot"><span class="cx-review-avatar" style="background:#3aa6a6">赵</span><b>赵影迷</b><span class="cx-stars">★★★★★</span></div>
+      </article>
+      <article class="cx-review">
+        <p>整体不错，但有几次搜索关键词匹配不够准确，明明站内有相关片名却排在很后面。希望搜索体验继续优化。</p>
+        <div class="cx-review-foot"><span class="cx-review-avatar" style="background:#d86a5a">孙</span><b>孙小姐</b><span class="cx-stars">★★★☆☆</span></div>
+      </article>
+    </div>
+
+    <div class="cx-duo" style="margin-top:40px">
+      <div>
+        <span class="cx-eyebrow">口碑榜</span>
+        <h3 style="font-size:19px;color:var(--cx-deep);margin-bottom:16px">本周站内口碑排行</h3>
+        <div class="cx-rank">
+          <div class="cx-rank-row"><i>1</i><b>秋季修复片单：老片的第二次呼吸</b><span>口碑 9.6</span></div>
+          <div class="cx-rank-row"><i>2</i><b>访谈摘录：拍了七年纪录片，我学会等待</b><span>口碑 9.4</span></div>
+          <div class="cx-rank-row"><i>3</i><b>老手艺人：一把竹椅的七十二道工序</b><span>口碑 9.2</span></div>
+          <div class="cx-rank-row"><i>4</i><b>为什么慢镜头不是拖延</b><span>口碑 9.0</span></div>
+          <div class="cx-rank-row"><i>5</i><b>城市慢镜：清晨六点的菜市场</b><span>口碑 8.8</span></div>
+          <div class="cx-rank-row"><i>6</i><b>剪辑干货：让旁白不尴尬的五个改稿动作</b><span>口碑 8.7</span></div>
+        </div>
+      </div>
+      <div>
+        <span class="cx-eyebrow">创作灵感</span>
+        <h3 style="font-size:19px;color:var(--cx-deep);margin-bottom:16px">本周选题与剪辑思路</h3>
+        <ul class="cx-inspire">
+          <li><b>选题｜一件物品的三十年</b><p>找一件家里用了很久的东西，用它的磨损痕迹串起时间线，采访它的使用者。</p></li>
+          <li><b>结构｜三段式但不落俗套</b><p>把「起因—冲突—结果」换成「声音—动作—留白」，让观众自己补全情绪。</p></li>
+          <li><b>剪辑｜先剪音轨再剪画面</b><p>先把对话、环境声理顺，再按呼吸节奏铺画面，往往比先排画面更顺。</p></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- UPDATES + PARTNERS -->
+  <section class="cx-section" id="cx-updates" aria-labelledby="cx-updates-title">
+    <div class="cx-section-head">
+      <span class="cx-eyebrow">企业动态</span>
+      <h2 class="cx-h2" id="cx-updates-title">小草影院<em>官方更新</em>与合作伙伴</h2>
+      <p class="cx-lead">平台的功能迭代、内容更新与共创计划进展，都会在这里同步。</p>
+    </div>
+    <div class="cx-news">
+      <article class="cx-news-card">
+        <div class="cx-news-date">2026 / 11 / 18</div>
+        <h3>4K 修复专区正式开放</h3>
+        <p>首批上线 12 部作品，支持修复前后对照播放与逐帧截图，章节标记同步完善。</p>
+      </article>
+      <article class="cx-news-card">
+        <div class="cx-news-date">2026 / 11 / 10</div>
+        <h3>创作者扶持计划第 6 期报名</h3>
+        <p>面向纪录、短片与影评方向，提供拍摄补贴、官方推荐位与成片发行支持，本月 30 日截止。</p>
+      </article>
+      <article class="cx-news-card">
+        <div class="cx-news-date">2026 / 10 / 28</div>
+        <h3>社区举报与反馈通道升级</h3>
+        <p>新增版权来源核验入口，用户可在作品页直接提交来源疑问，处理进度全程可查。</p>
+      </article>
+    </div>
+    <div class="cx-partners">
+      <span class="cx-partner">青禾纪录片工作室</span>
+      <span class="cx-partner">声画实验室</span>
+      <span class="cx-partner">南巷文化影像</span>
+      <span class="cx-partner">城市放映联盟</span>
+      <span class="cx-partner">帧率青年影展</span>
+      <span class="cx-partner">草地读书会</span>
+    </div>
+  </section>
+
+  <!-- FAQ + CTA -->
+  <section class="cx-section" id="cx-faq" aria-labelledby="cx-faq-title">
+    <div class="cx-section-head">
+      <span class="cx-eyebrow">帮助中心</span>
+      <h2 class="cx-h2" id="cx-faq-title">关于小草影院的<em>常见问题</em></h2>
+      <p class="cx-lead">如果你第一次来到这里，下面这些问题可能会帮到你。点击标题展开查看。</p>
+    </div>
+    <div class="cx-faq">
+      <details>
+        <summary>小草影院的内容是正版的吗？</summary>
+        <p>站内标注为高清正版的作品，均来自官方授权或创作者本人授权发布。我们在作品页保留来源说明与授权信息，并提供版权来源核验与举报入口。</p>
+      </details>
+      <details>
+        <summary>「在线观看免费完整版」具体指什么？</summary>
+        <p>指平台不设观看门槛，且作品不拆分关键段落、不插播广告、不强制中断。免费是针对观看门槛，完整是针对内容呈现，二者都不意味着绕过授权。</p>
+      </details>
+      <details>
+        <summary>如何成为小草影院的创作者？</summary>
+        <p>可通过页面上的「投稿入口」提交作品与创作方向，编辑部会在五个工作日内回复。通过审核后可参与专题共创与创作者扶持计划。</p>
+      </details>
+      <details>
+        <summary>支持哪些清晰度与字幕？</summary>
+        <p>站内作品 1080P 起步，重点作品提供 4K 与 HDR 版本；字幕支持中文简体、繁体与英文三轨，纪录片与访谈类内容提供时间轴章节。</p>
+      </details>
+      <details>
+        <summary>可以在移动端观看吗？</summary>
+        <p>可以。页面采用响应式布局，移动端导航可折叠，片库与专题在手机上自动改为单列展示，加载优先保证首屏内容。</p>
+      </details>
+      <details>
+        <summary>如何反馈内容问题？</summary>
+        <p>在作品页使用举报或反馈入口提交，我们会记录并跟进处理进度。涉及版权来源的疑问会被优先处理。</p>
+      </details>
+    </div>
+
+    <div class="cx-cta" style="margin-top:44px">
+      <div>
+        <h2>把你的作品，放进小草影院的片单</h2>
+        <p>无论是一支短片、一段纪录，还是一篇影评，我们都愿意认真看完。投稿入口长期开放，创作者扶持计划第 6 期正在报名。</p>
+      </div>
+      <div class="cx-cta-actions">
+        <button class="cx-btn cx-btn-primary" data-cx-modal="submit">立即投稿</button>
+        <button class="cx-btn cx-btn-ghost" data-cx-modal="share">分享官网</button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="cx-footer">
+  <div class="cx-footer-grid">
+    <div>
+      <div class="cx-footer-brand">
+        <svg width="30" height="30" viewBox="0 0 64 64" role="img" aria-label="小草影院页脚标识">
+          <rect width="64" height="64" rx="14" fill="#123423"/>
+          <path d="M20 46c0-14 8-24 24-28-4 8-6 16-6 22 0 4 1 6 3 8-8 2-16 1-21-2z" fill="#48c78c"/>
+        </svg>
+        <b>小草影院</b>
+      </div>
+      <p>小草影院官方网站，专注高清正版影视内容的在线观看与社区共创。作为一家持续运营的视频品牌，我们坚持正版、完整、高清与真实，为创作者与观众搭建值得信赖的内容生态。</p>
+    </div>
+    <div>
+      <h4>内容</h4>
+      <ul>
+        <li><a href="#cx-videos">片库索引</a></li>
+        <li><a href="#cx-topics">专题企划</a></li>
+        <li><a href="#cx-authors">创作者矩阵</a></li>
+        <li><a href="#cx-reviews">用户口碑</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>关于</h4>
+      <ul>
+        <li><a href="#cx-keyword">品牌解析</a></li>
+        <li><a href="#cx-updates">企业动态</a></li>
+        <li><a href="#cx-faq">帮助中心</a></li>
+        <li><a href="#cx-faq">版权说明</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>参与</h4>
+      <ul>
+        <li><a href="#cx-faq">投稿入口</a></li>
+        <li><a href="#cx-reviews">创作灵感</a></li>
+        <li><a href="#cx-updates">合作品牌</a></li>
+        <li><a href="#cx-faq">反馈通道</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="cx-footer-bottom">
+    <span>小草影院官方网站 | 版权所有 | 持续运营中</span>
+    <span>内容均标注授权来源，支持版权核验</span>
+    <span>沪 ICP 备 2026000000 号-6</span>
+  </div>
+</footer>
+
+<button class="cx-totop" id="cx-totop" aria-label="回到顶部">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="m5 12 7-7 7 7"/></svg>
+</button>
+
+<div class="cx-toast" id="cx-toast" role="status" aria-live="polite"></div>
+
+<div class="cx-modal" id="cx-modal-submit">
+  <div class="cx-modal-box">
+    <button class="cx-modal-close" data-cx-close aria-label="关闭">×</button>
+    <h3>投稿入口</h3>
+    <p>写下你的作品名称与创作方向，编辑部会在五个工作日内回复。优秀作品将进入专题推荐与创作者扶持计划评估。</p>
+    <textarea id="cx-submit-text" placeholder="例如：一支 8 分钟的城市纪录短片，主题是清晨的菜市场……" aria-label="作品简介"></textarea>
+    <div class="cx-modal-actions">
+      <button class="cx-btn cx-btn-ghost" data-cx-close>取消</button>
+      <button class="cx-btn cx-btn-primary" id="cx-submit-send">提交</button>
+    </div>
+  </div>
+</div>
+
+<div class="cx-modal" id="cx-modal-share">
+  <div class="cx-modal-box">
+    <button class="cx-modal-close" data-cx-close aria-label="关闭">×</button>
+    <h3>分享小草影院</h3>
+    <p>选择分享方式，或复制链接发送给朋友。</p>
+    <div class="cx-share-grid">
+      <button data-cx-share="微信">微信</button>
+      <button data-cx-share="微博">微博</button>
+      <button data-cx-share="QQ">QQ</button>
+      <button data-cx-share="邮件">邮件</button>
+      <button data-cx-share="朋友圈">朋友圈</button>
+      <button data-cx-share="复制链接">复制链接</button>
+    </div>
+  </div>
+</div>
+
+<div class="cx-modal" id="cx-modal-author">
+  <div class="cx-modal-box">
+    <button class="cx-modal-close" data-cx-close aria-label="关闭">×</button>
+    <h3 id="cx-author-title">创作者档案</h3>
+    <p id="cx-author-body">这里是创作者在小草影院的长期档案，包含擅长领域、代表作品与创作理念。</p>
+    <div class="cx-modal-actions">
+      <button class="cx-btn cx-btn-ghost" data-cx-close>关闭</button>
+      <button class="cx-btn cx-btn-primary" data-cx-modal="submit">联系投稿</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var toastEl = document.getElementById('cx-toast');
+  var toastTimer = null;
+  function showToast(msg){
+    toastEl.textContent = msg;
+    toastEl.classList.add('cx-show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toastEl.classList.remove('cx-show'); }, 2200);
+  }
+
+  /* ---- mobile nav ---- */
+  var navToggle = document.getElementById('cx-nav-toggle');
+  var mobileNav = document.getElementById('cx-mobile-nav');
+  if(navToggle && mobileNav){
+    navToggle.addEventListener('click', function(){
+      var open = mobileNav.classList.toggle('cx-open');
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    mobileNav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A'){
+        mobileNav.classList.remove('cx-open');
+        navToggle.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  /* ---- search feedback ---- */
+  var searchInput = document.getElementById('cx-search-input');
+  var searchTip = document.getElementById('cx-search-tip');
+  var videoArticles = Array.prototype.slice.call(document.querySelectorAll('#cx-video-list .cx-video'));
+  if(searchInput && searchTip){
+    searchInput.addEventListener('input', function(){
+      var q = searchInput.value.trim();
+      if(!q){
+        searchTip.classList.remove('cx-open');
+        videoArticles.forEach(function(a){ a.style.display = ''; });
+        return;
+      }
+      var hit = 0;
+      videoArticles.forEach(function(a){
+        var text = a.textContent || '';
+        var match = text.indexOf(q) !== -1;
+        a.style.display = match ? '' : 'none';
+        if(match) hit++;
+      });
+      searchTip.classList.add('cx-open');
+      searchTip.innerHTML = '关键词 <b>' + q.replace(/[<>&]/g,'') + '</b>：片库匹配 ' + hit + ' 条内容';
+    });
+    searchInput.addEventListener('blur', function(){
+      setTimeout(function(){ searchTip.classList.remove('cx-open'); }, 160);
+    });
+    searchInput.addEventListener('focus', function(){
+      if(searchInput.value.trim()){ searchTip.classList.add('cx-open'); }
+    });
+  }
+
+  /* ---- like ---- */
+  document.querySelectorAll('[data-cx-like]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var liked = btn.classList.toggle('cx-liked');
+      btn.textContent = liked ? '已点赞' : '点赞';
+      showToast(liked ? '已点赞，感谢你的支持' : '已取消点赞');
+    });
+  });
+
+  /* ---- save ---- */
+  document.querySelectorAll('[data-cx-save]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var saved = btn.classList.toggle('cx-saved');
+      btn.textContent = saved ? '已收藏' : '收藏';
+      showToast(saved ? '已加入你的收藏夹' : '已取消收藏');
+    });
+  });
+
+  /* ---- modals ---- */
+  var modals = document.querySelectorAll('.cx-modal');
+  function closeAll(){
+    modals.forEach(function(m){ m.classList.remove('cx-open'); });
+  }
+  function openModal(name){
+    closeAll();
+    var target = document.getElementById('cx-modal-' + name);
+    if(target){ target.classList.add('cx-open'); }
+  }
+  document.querySelectorAll('[data-cx-modal]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var name = btn.getAttribute('data-cx-modal');
+      if(name === 'author'){
+        var authorName = btn.getAttribute('data-author') || '创作者';
+        var titleEl = document.getElementById('cx-author-title');
+        var bodyEl = document.getElementById('cx-author-body');
+        if(titleEl){ titleEl.textContent = authorName + ' · 创作者档案'; }
+        if(bodyEl){ bodyEl.textContent = authorName + ' 在小草影院长期更新作品，擅长把日常观察转化为可回看的影像。你可以通过投稿入口与编辑部取得联系，了解专题共创与扶持计划。'; }
+      }
+      openModal(name);
+    });
+  });
+  modals.forEach(function(m){
+    m.addEventListener('click', function(e){
+      if(e.target === m){ m.classList.remove('cx-open'); }
+    });
+    m.querySelectorAll('[data-cx-close]').forEach(function(b){
+      b.addEventListener('click', function(){ m.classList.remove('cx-open'); });
+    });
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape'){ closeAll(); }
+  });
+
+  /* ---- submit ---- */
+  var sendBtn = document.getElementById('cx-submit-send');
+  if(sendBtn){
+    sendBtn.addEventListener('click', function(){
+      var txt = document.getElementById('cx-submit-text');
+      if(txt && txt.value.trim().length < 5){
+        showToast('请至少填写 5 个字的作品简介');
+        return;
+      }
+      if(txt){ txt.value = ''; }
+      closeAll();
+      showToast('投稿已提交，编辑部会在五个工作日内回复');
+    });
+  }
+
+  /* ---- share ---- */
+  document.querySelectorAll('[data-cx-share]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var type = btn.getAttribute('data-cx-share');
+      if(type === '复制链接'){
+        var url = window.location.href;
+        if(navigator.clipboard && navigator.clipboard.writeText){
+          navigator.clipboard.writeText(url).then(function(){
+            showToast('链接已复制');
+          }).catch(function(){
+            showToast('复制失败，请手动复制浏览器地址');
+          });
+        }else{
+          showToast('当前浏览器不支持自动复制，请手动复制地址');
+        }
+        return;
+      }
+      showToast('已生成分享入口：' + type);
+    });
+  });
+
+  /* ---- counters ---- */
+  var counters = document.querySelectorAll('[data-cx-count]');
+  if(counters.length){
+    var started = false;
+    function runCounters(){
+      if(started) return;
+      var rect = counters[0].getBoundingClientRect();
+      if(rect.top < window.innerHeight - 60){
+        started = true;
+        counters.forEach(function(el){
+          var target = parseInt(el.getAttribute('data-cx-count'), 10) || 0;
+          var cur = 0;
+          var step = Math.max(1, Math.round(target / 48));
+          var timer = setInterval(function(){
+            cur += step;
+            if(cur >= target){ cur = target; clearInterval(timer); }
+            el.textContent = cur.toLocaleString('zh-CN');
+          }, 26);
+        });
+      }
+    }
+    window.addEventListener('scroll', runCounters, {passive:true});
+    window.addEventListener('load', runCounters);
+    runCounters();
+  }
+
+  /* ---- back to top ---- */
+  var toTop = document.getElementById('cx-totop');
+  if(toTop){
+    window.addEventListener('scroll', function(){
+      if(window.scrollY > 520){ toTop.classList.add('cx-show'); }
+      else{ toTop.classList.remove('cx-show'); }
+    }, {passive:true});
+    toTop.addEventListener('click', function(){
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+  }
+
+  /* ---- search fallback for mobile: guide to videos ---- */
+  document.querySelectorAll('.cx-mobile-nav a').forEach(function(a){
+    a.addEventListener('click', function(){
+      showToast('正在前往：' + a.textContent.trim());
+    });
+  });
+})();
+</script>
+</body>
+          </html>
